@@ -1,0 +1,43 @@
+<svg width="1200" height="560" viewBox="0 0 1200 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="560" rx="28" fill="#FFF9F3"/>
+  <rect x="36" y="36" width="1128" height="488" rx="24" fill="#FFFDF9" stroke="#E7D8C8" stroke-width="2"/>
+  <text x="70" y="95" fill="#5A3118" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700">YOLOv11 Principle Diagram</text>
+  <text x="70" y="130" fill="#7A5C47" font-family="Segoe UI, Arial, sans-serif" font-size="18">Single-stage lesion detection pipeline for localization in breast ultrasound images</text>
+
+  <rect x="70" y="180" width="180" height="210" rx="22" fill="#F8E6D6" stroke="#D0A581" stroke-width="2"/>
+  <text x="112" y="225" fill="#5A3118" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Input</text>
+  <rect x="102" y="248" width="118" height="100" rx="16" fill="#FFF8F2" stroke="#B87B49" stroke-width="2"/>
+  <ellipse cx="161" cy="298" rx="32" ry="22" fill="#D7DDE6"/>
+  <ellipse cx="161" cy="298" rx="22" ry="15" fill="#9AA7BC"/>
+  <ellipse cx="170" cy="292" rx="8" ry="6" fill="#E47C7C"/>
+  <text x="106" y="372" fill="#7A5C47" font-family="Segoe UI, Arial, sans-serif" font-size="16">Ultrasound image</text>
+
+  <rect x="300" y="180" width="220" height="210" rx="22" fill="#F5EFE7" stroke="#B99270" stroke-width="2"/>
+  <text x="360" y="225" fill="#5A3118" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Backbone</text>
+  <rect x="338" y="248" width="144" height="26" rx="12" fill="#D9B08A"/>
+  <rect x="338" y="286" width="144" height="26" rx="12" fill="#C99263"/>
+  <rect x="338" y="324" width="144" height="26" rx="12" fill="#B87B49"/>
+  <text x="338" y="378" fill="#7A5C47" font-family="Segoe UI, Arial, sans-serif" font-size="16">Feature extraction at multiple scales</text>
+
+  <rect x="570" y="180" width="220" height="210" rx="22" fill="#F0F7F3" stroke="#6D9E7A" stroke-width="2"/>
+  <text x="645" y="225" fill="#2D5B3B" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Neck</text>
+  <path d="M627 260H733V350H627Z" fill="#DDF0E2"/>
+  <path d="M680 250L740 300L680 350L620 300L680 250Z" fill="#87B593" stroke="#4E8360" stroke-width="2"/>
+  <text x="615" y="378" fill="#53735C" font-family="Segoe UI, Arial, sans-serif" font-size="16">Feature fusion and enhancement</text>
+
+  <rect x="840" y="180" width="280" height="210" rx="22" fill="#F8EAE3" stroke="#C98D74" stroke-width="2"/>
+  <text x="948" y="225" fill="#8A4F2B" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">Head</text>
+  <rect x="872" y="254" width="216" height="32" rx="12" fill="#E9C6B4"/>
+  <rect x="872" y="298" width="216" height="32" rx="12" fill="#DFA88D"/>
+  <rect x="872" y="342" width="216" height="32" rx="12" fill="#CB835C"/>
+  <text x="884" y="278" fill="#6A3A22" font-family="Segoe UI, Arial, sans-serif" font-size="16">Bounding box regression</text>
+  <text x="884" y="322" fill="#6A3A22" font-family="Segoe UI, Arial, sans-serif" font-size="16">Confidence estimation</text>
+  <text x="884" y="366" fill="#6A3A22" font-family="Segoe UI, Arial, sans-serif" font-size="16">Lesion category scoring</text>
+
+  <path d="M250 285H300" stroke="#8A4F2B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M520 285H570" stroke="#8A4F2B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M790 285H840" stroke="#8A4F2B" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="330" y="432" width="540" height="50" rx="18" fill="#FFF1E4" stroke="#E1B792" stroke-width="2"/>
+  <text x="370" y="464" fill="#7A4C2D" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600">Output: lesion location + lesion confidence + candidate class prediction</text>
+</svg>

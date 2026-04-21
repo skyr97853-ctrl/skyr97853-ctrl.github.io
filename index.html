@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="Academic Webpage" />
-    <meta name="author" content="yixin0313" />
+    <meta name="description" content="樊澤宇的个人主页，展示教育背景、项目经历、竞赛奖项与技能概览。" />
+    <meta name="author" content="樊澤宇" />
     <title id="title"></title>
 
     <!-- Icon -->
@@ -79,12 +79,11 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" data-content-dir="contents/" data-config-file="config.yml">
     <!-- Navigation-->
     <nav class="header navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div class="container px-5">
             <a id="page-top-title" class="navbar-brand fw-bold" href="#page-top"></a>
-            <!-- <a href="#page-top"><img src="static/assets/img/CUMT_LOGO.svg" style="width: 11rem;"></a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 MENU
@@ -93,16 +92,19 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#home">HOME</a>
+                        <a class="nav-link me-lg-3" href="#home">关于我</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#awards">AWARDS</a>
+                        <a class="nav-link me-lg-3" href="#awards">竞赛奖项</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#experience">EXPERIENCE</a>
+                        <a class="nav-link me-lg-3" href="#experience">项目经历</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link me-lg-3" href="#publications">PUBLICATIONS</a>
+                        <a class="nav-link me-lg-3" href="#publications">志愿与技能</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link me-lg-3" href="./index-en.html">EN</a>
                     </li>
                 </ul>
             </div>
@@ -122,7 +124,7 @@
     <!-- Photo -->
     <div class="container px-5">
         <div id="avatar">
-            <img class="shadow" src="static/assets/img/photo.png">
+            <img class="shadow" src="static/assets/img/profile.jpg" alt="樊澤宇个人图片">
         </div>
     </div>
     <!-- Photo -->
@@ -143,7 +145,7 @@
     <section class="bg-gradient-primary-to-secondary-light mt5 md5" id="awards">
         <div class="container px-5">
             <header>
-                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>AWARDS </h2>
+                <h2 id="awards-subtitle"><i class="bi bi-award-fill"></i>竞赛奖项</h2>
             </header>
             <div class="main-body" id="awards-md"></div>
 
@@ -155,7 +157,7 @@
     <section class="bg-gradient-primary-to-secondary-dark mt5 md5" id="experience">
         <div class="container px-5">
             <header>
-                <h2 id="experience-subtitle"><i class="bi bi-briefcase-fill"></i> EXPERIENCE </h2>
+                <h2 id="experience-subtitle"><i class="bi bi-briefcase-fill"></i>项目经历</h2>
             </header>
             <div class="main-body" id="experience-md"></div>
         </div>
@@ -166,7 +168,7 @@
     <section class="bg-gradient-primary-to-secondary-gray mt5 md5" id="publications">
         <div class="container px-5">
             <header>
-                <h2 id="publications-subtitle"><i class="bi bi-file-text-fill"></i>&nbsp;PUBLICATIONS</h2>
+                <h2 id="publications-subtitle"><i class="bi bi-stars"></i>志愿与技能</h2>
             </header>
             <div class="main-body" id="publications-md"></div>
 
@@ -179,10 +181,7 @@
         <div class="container px-5">
             <div class="text-white-50 small">
                 <div id="copyright-text" class="mb-2"></div>
-                <a id="github-link" href="https://github.com/senli1073">Github</a>
-                <span class="mx-1">&middot;</span>
-                <a id="license-link"
-                    href="https://github.com/senli1073/senli1073.github.io/blob/main/LICENSE">License</a>
+                <a href="./index-en.html">English</a>
             </div>
         </div>
     </footer>

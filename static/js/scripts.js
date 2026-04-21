@@ -1,9 +1,10 @@
-const content_dir = 'contents/'
-const config_file = 'config.yml'
 const section_names = ['home', 'awards', 'experience', 'publications'];
 
 
 window.addEventListener('DOMContentLoaded', event => {
+    const content_dir = document.body?.dataset?.contentDir || 'contents/';
+    const config_file = document.body?.dataset?.configFile || 'config.yml';
+    const lightbox = createImageLightbox();
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
@@ -58,6 +59,66 @@ window.addEventListener('DOMContentLoaded', event => {
                 MathJax.typeset();
             })
             .catch(error => console.log(error));
-    })
+    });
+
+    document.addEventListener('click', (e) => {
+        const image = e.target.closest('.project-figure img');
+        if (!image) {
+            return;
+        }
+
+        const caption = image.closest('.project-figure')?.querySelector('figcaption');
+        lightbox.open(image.currentSrc || image.src, image.alt || '', caption?.innerHTML || '');
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            lightbox.close();
+        }
+    });
 
 }); 
+
+function createImageLightbox() {
+    const overlay = document.createElement('div');
+    overlay.className = 'image-lightbox';
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.innerHTML = `
+        <div class="image-lightbox-dialog" role="dialog" aria-modal="true" aria-label="Image preview">
+            <button class="image-lightbox-close" type="button" aria-label="Close preview">&times;</button>
+            <div class="image-lightbox-media">
+                <img alt="">
+            </div>
+            <p class="image-lightbox-caption"></p>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    const dialog = overlay.querySelector('.image-lightbox-dialog');
+    const image = overlay.querySelector('.image-lightbox-media img');
+    const caption = overlay.querySelector('.image-lightbox-caption');
+    const closeButton = overlay.querySelector('.image-lightbox-close');
+
+    const close = () => {
+        overlay.classList.remove('is-open');
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    };
+
+    const open = (src, alt, captionHtml) => {
+        image.src = src;
+        image.alt = alt;
+        caption.innerHTML = captionHtml;
+        overlay.classList.add('is-open');
+        overlay.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    };
+
+    overlay.addEventListener('click', (e) => {
+        if (!dialog.contains(e.target) || e.target === closeButton) {
+            close();
+        }
+    });
+
+    return { open, close };
+}

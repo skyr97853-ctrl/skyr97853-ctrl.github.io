@@ -1,3 +1,9 @@
-- 校级一等奖学金, 2022.  
-
-- Outstanding Graduation Thesis, XXX University, 2023. 
+<div class="detail-card">
+  <h4>竞赛奖项</h4>
+  <ul>
+    <li>第七届全球校园人工智能算法精英大赛 算法巅峰赛国赛二等奖</li>
+    <li>第六届全球校园人工智能算法精英大赛 算法挑战赛省级三等奖</li>
+    <li>2025 睿抗机器人开发者大赛（RAICOM）编程技能赛省级三等奖</li>
+    <li>第十五届全国大学生数学竞赛（非数学 A 类）省级三等奖</li>
+  </ul>
+</div>
