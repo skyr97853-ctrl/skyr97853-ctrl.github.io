@@ -70,7 +70,7 @@
   </figure>
 </div>
 <div class="project-link-row">
-  <a class="project-link" href="https://github.com/skyr97853-ctrl/Fairer-Benchmark-Evaluation" target="_blank" rel="noopener noreferrer">GitHub: Fairer Benchmark Evaluation</a>
+  <a class="project-link" href="https://anonymous.4open.science/r/e-F278" target="_blank" rel="noopener noreferrer">GitHub: Fairer Benchmark Evaluation</a>
 </div>
   </article>
 </div>
